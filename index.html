@@ -5,26 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+  <link rel="icon" href="./assets/img/favicon-32x32.png">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css"
     integrity="sha512-NaaXI5f4rdmlThv3ZAVS44U9yNWJaUYWzPhvlg5SC7nMRvQYV9suauRK3gVbxh7qjE33ApTPD+hkOW78VSHyeg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
-  <title>Gregslist</title>
+  <title>Michael's async Gregslist</title>
 </head>
 
 <body class="text-light">
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-info text-light no-select">
-      <a class="navbar-brand ms-3" href="#">
-        🚗🏡💼
-        <span class="ms-2"><b class="text-primary">G</b>regslist</span>
-      </a>
-      <button class="btn selectable" onclick="app.carsController.viewCars()">🚗</button>
-      <button class="btn selectable" onclick="">🏠</button>
-      <button class="btn selectable" onclick="">💼</button>
+      <h5 class="ps-2"> 🚗 🏡 💼
+        <span class="ms-2">Michael's async <b class="text-primary">G</b>regslist</span>
+        <button class="btn btn-outline-primary" onclick="app.carsController.viewCars()">🚗</button>
+        <button class="btn btn-outline-primary" onclick="app.housesController.viewHouses()">🏠</button>
+        <button class="btn btn-outline-primary" onclick="app.jobsController.viewJobs()">💼</button>
+      </h5>
     </nav>
   </header>
   <main>
@@ -59,6 +58,33 @@
       </div>
 
       <section id="listings" class="row g-3 py-3">
+        <!-- STUB - job template -->
+        <!-- <div class="col-6 col-md-4">
+          <div class="bg-light rounded elevation-5">
+            <h5 class="p-2 text-center text-dark">${this.jobTitle}</h5>
+            <p class="text-warning">Company: ${this.company}</p>
+            <p class="text-dark">Description: ${this.description}</p>
+            <p class="text-dark">Hours: ${this.hours} -- Rate: ${this.rate}</p>
+            <button class="btn btn-danger" onclick="app.jobsController.deleteJob('${this.id}')"> <i
+                class="mdi mdi-delete-forever"></i></button>
+            <button class="btn btn-warning" onclick="app.jobsController.openEditJobForm('${this.id}')"
+              data-bs-toggle="modal" data-bs-target="#edit-modal"><i class="mdi mdi-pen"></i></button>
+          </div>
+        </div> -->
+
+        <!-- STUB - house template -->
+        <!-- <div class="col-6 col-md-4">
+          <div class="bg-light rounded elevation-5">
+            <img class="img-fluid" src="${this.imgUrl}" alt="${this.bedrooms} ${this.bathrooms}">
+            <h5 class="p-2 text-center text-dark">${this.bedrooms} | ${this.bathrooms} | ${this.level}</h5>
+            <p class="text-warning">Year Built: ${this.year}</p>
+            <button class="btn btn-danger" onclick="app.housesController.deleteHouse('${this.id}')"> <i
+                class="mdi mdi-delete-forever"></i></button>
+            <button class="btn btn-warning" onclick="app.housesController.openEditHouseForm('${this.id}')"
+              data-bs-toggle="modal" data-bs-target="#edit-modal"><i class="mdi mdi-pen"></i></button>
+          </div>
+        </div> -->
+
         <!-- STUB car template -->
         <!-- <div class="col-6 col-md-4">
           <div class="bg-light rounded elevation-5">
@@ -70,9 +96,9 @@
       </section>
     </div>
   </main>
-  <footer class="bg-dark text-light">
-    <div class="text-center no-select">
-      <p><small>Made with 💖 by Greg</small></p>
+  <footer class="bg-info text-light">
+    <div class="text-center no-select pt-2">
+      <p><small>Made with 🛰️ by Michael Patience</small></p>
     </div>
   </footer>
 
